@@ -135,17 +135,21 @@ export default function App() {
 
   return (
     <div style={{ minHeight: "100vh", background: "#FAF6F0", color: "#2B2A33", fontFamily: "'Source Serif Pro', Georgia, serif" }}>
-      <style>{`
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
         @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Source+Serif+Pro:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
         * { box-sizing: border-box; }
         h1, h2, h3 { font-family: 'Fraunces', serif; }
-      `}</style>
+      `,
+        }}
+      />
 
       <header style={{ padding: "20px 20px 12px", display: "flex", gap: 8, flexWrap: "wrap", borderBottom: "1px solid #E8DDC7", position: "sticky", top: 0, background: "#FAF6F0", zIndex: 10 }}>
-        <NavDot id="hero" label="Start" />
-        <NavDot id="questions" label="Questions to Ask" />
-        <NavDot id="script" label="If They Dismiss You" />
-        <NavDot id="coach" label="Ask the Coach" />
+        <NavDot id="hero" label="Home" />
+        <NavDot id="questions" label="Visit Questions" />
+        <NavDot id="script" label="Advocate for Yourself" />
+        <NavDot id="coach" label="Conversation Coach" />
         <NavDot id="log" label="My Notes" />
       </header>
 
@@ -173,7 +177,7 @@ export default function App() {
 
         {screen === "questions" && (
           <section>
-            <h2 style={{ fontSize: 26, marginBottom: 20 }}>Questions worth asking</h2>
+           <h2 style={{ fontSize: 24, marginBottom: 20 }}>Conversation Coach</h2>
             {QUESTIONS_TO_ASK.map((q, i) => (
               <div key={i} style={{ background: "#fff", border: "1px solid #E8DDC7", borderRadius: 12, padding: "18px 22px", marginBottom: 14, display: "flex", gap: 14 }}>
                 <span style={{ fontFamily: "'IBM Plex Mono', monospace", color: "#7C8B6F", fontSize: 13, paddingTop: 2 }}>{String(i + 1).padStart(2, "0")}</span>
