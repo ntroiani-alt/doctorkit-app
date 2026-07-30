@@ -153,10 +153,9 @@ export default function App() {
         <NavDot id="log" label="My Notes" />
       </header>
 
-      <div style={{ textAlign: "center", fontSize: 12, color: "#8A8790", padding: "8px 20px 0", fontStyle: "italic" }}>
+       <div style={{ maxWidth: 640, margin: "12px auto 0", padding: "10px 16px", background: "#E8DDC7", borderRadius: 10, fontSize: 13, color: "#4A4852", textAlign: "center", boxShadow: "0 2px 8px rgba(43, 42, 51, 0.08)" }}>
         Not medical advice — for support and reflection only. Your notes stay private in your browser.
       </div>
-
       <main style={{ maxWidth: 640, margin: "0 auto", padding: "32px 20px 80px" }}>
         {screen === "hero" && (
           <section>
